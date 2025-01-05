@@ -1,0 +1,200 @@
+/* Reset margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* :root {
+  --progress-degree: 0%;
+} */
+
+/* Font face for Instagram custom font */
+@font-face {
+  font-family: "Instagram";
+  src: url("./fonts/InstagramSansScript-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Main container styling */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 80%;
+  margin: 25px auto 0;
+  padding: 20px;
+  /* max-height: 100vh; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.15); /* Elevated effect */
+  border-radius: 8px; /* Optional: adds rounded corners */
+  position: relative; /* Enable absolute positioning of footer */
+  padding-bottom: 50px; /* Ensure space for footer */
+}
+/* Label styling */
+.main-container label {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* User input section styling */
+.user-input {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Username input field styling */
+#username-input {
+  padding: 10px;
+  width: 70%; /* Adjusted for a responsive design */
+  max-width: 100%;
+  border: 2px solid #ccc; /* Light border for the input */
+  border-radius: 5px; /* Rounded corners for the input */
+  transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+
+/* Elevation effect on focus */
+#username-input:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow when focused */
+  border-color: #4caf50; /* Optional: Change border color on focus */
+}
+
+/* Search button styling */
+#search-btn {
+  padding: 10px;
+  width: 25%;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #4caf50; /* Added background color */
+  color: white; /* Added text color */
+  border: none;
+  border-radius: 5px; /* Slight rounding of the button */
+  transition: background-color 0.3s ease; /* Smooth background change */
+}
+
+/* Search button hover effect */
+#search-btn:hover {
+  background-color: #2cdd34;
+}
+
+/* Header styling */
+.header {
+  font-family: "Instagram", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+/* Stats section styling */
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 2px solid green;
+  width: 100%;
+}
+
+/* Footer styling */
+footer {
+  position: absolute; /* Position the footer at the bottom of the container */
+  bottom: 0;
+  left: 50%; /* Center it horizontally */
+  transform: translateX(
+    -50%
+  ); /* Offset the horizontal positioning to truly center it */
+  width: 100%; /* Ensure it spans across the whole page */
+  text-align: center; /* Center the content horizontally */
+  padding: 10px 0;
+  background-color: #f8f8f8; /* Light background color */
+  font-size: 1rem;
+  color: #333; /* Text color */
+  font-family: "Lucida Sans", Arial, sans-serif;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  transition: all 0.3s ease;
+  /* Smooth transition for hover effect */
+}
+
+/* Hover effect for footer */
+footer:hover {
+  background-color: #4caf50; /* Change background on hover */
+  color: white; /* Change text color on hover */
+  /* transform: translateX(-50%) scale(1.05); Slightly scale the footer */
+}
+
+/* Link styling inside the footer */
+footer a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from the parent */
+  font-weight: bold; /* Make the username bold */
+}
+
+/* Link hover effect */
+footer a:hover {
+  text-decoration: underline; /* Underline the link on hover */
+}
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #283a2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  background: conic-gradient(#283a2e var(--progress-degree, 0%), #299f5d 0%);
+  flex-direction: column;
+}
+
+.circle span {
+  position: relative;
+  z-index: 2;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 255, 0.3); /* Elevated shadow on hover */
+}
+.progress {
+  max-width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.progress-item {
+  /* color: blue; */
+  /* border: 2px solid red; */
+  /* background-color: #283a2e; */
+}
+.stats-cards {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.card {
+  background-color: rgb(230, 146, 44);
+  padding: 20px;
+  width: 40%;
+  max-width: 200px;
+  border-radius: 10px;
+  font-size: 1rem;
+  min-height: 4rem;
+}
