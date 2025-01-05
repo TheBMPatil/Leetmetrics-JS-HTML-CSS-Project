@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       searchButton.textContent = "Searching...";
       searchButton.disabled = true;
       const targetUrl = `https://leetcode.com/graphql`;
-      const proxyUrl = `http://cors-anywhere.herokuapp.com/`;
+      // const proxyUrl = `http://cors-anywhere.herokuapp.com/`;
       const myHeaders = new Headers();
       myHeaders.append("content-type", "application/json");
       const graphql = JSON.stringify({
