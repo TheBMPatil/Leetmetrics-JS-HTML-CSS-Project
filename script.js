@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         redirect: "follow",
       };
 
-      const response = await fetch(targetUrl, requestOptions);
+      const response = await fetch("https://leetcode.com/graphql", requestOptions);
       if (!response.ok) {
         throw new Error("Unable to fetch user details");
       }
